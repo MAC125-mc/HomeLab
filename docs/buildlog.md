@@ -15,3 +15,8 @@
 - Verified the SSH service is active.
 - Recorded the VM network configuration with `ip addr`.
 - Created a VirtualBox snapshot: “Ubuntu Server – Base Configuration Complete.”
+## Private Management Network and SSH
+- Retained NAT on Adapter 1 for internet access.
+- Added a Host-Only Adapter as Adapter 2 for private host-to-VM communication.
+- Identified the VM’s Host-Only IP address with `ip -br addr`.
+- Connected from the Windows host using SSH.
