@@ -9,3 +9,9 @@
 - Configured Adapter 1 as NAT in VirtualBox.
 - Confirmed outbound connectivity with:
   `ping -c 4 8.8.8.8`
+  ## Base Server Configuration
+- Updated Ubuntu packages.
+- Installed OpenSSH Server, curl, and net-tools.
+- Verified the SSH service is active.
+- Recorded the VM network configuration with `ip addr`.
+- Created a VirtualBox snapshot: “Ubuntu Server – Base Configuration Complete.”
