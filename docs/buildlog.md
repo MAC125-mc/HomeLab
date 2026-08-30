@@ -20,8 +20,13 @@
 - Added a Host-Only Adapter as Adapter 2 for private host-to-VM communication.
 - Identified the VM’s Host-Only IP address with `ip -br addr`.
 - Connected from the Windows host using SSH.
-- ## Firewall Configuration
+## Firewall Configuration
 - Installed and enabled UFW.
 - Set the default policy to deny incoming traffic and allow outgoing traffic.
 - Allowed OpenSSH (TCP port 22) for remote administration.
 - Verified SSH access still works after enabling the firewall.
+## Nginx Web Server Deployment
+- Installed Nginx
+- Allowed HTTP traffic through UFW
+- Enabled and started Nginx
+- Verified Nginx is running by going to 192.168.56.101 (Host-Only IP)
