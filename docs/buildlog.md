@@ -9,6 +9,7 @@
 - Configured Adapter 1 as NAT in VirtualBox.
 - Confirmed outbound connectivity with:
   `ping -c 4 8.8.8.8`
+- Snapshot title VMping1
   ## Base Server Configuration
 - Updated Ubuntu packages.
 - Installed OpenSSH Server, curl, and net-tools.
