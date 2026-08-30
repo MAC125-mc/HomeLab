@@ -30,3 +30,37 @@
 - Allowed HTTP traffic through UFW
 - Enabled and started Nginx
 - Verified Nginx is running by going to 192.168.56.101 (Host-Only IP)
+- ## SSH Key Authentication and Hardening
+
+* Generated an ED25519 SSH key pair on the Windows host:
+
+  ```powershell
+  ssh-keygen -t ed25519 -C "homelab-ubuntu"
+  ```
+
+* Added the Windows public key to the Ubuntu user's `~/.ssh/authorized_keys` file.
+
+* Applied secure permissions:
+
+  ```bash
+  chmod 700 ~/.ssh
+  chmod 600 ~/.ssh/authorized_keys
+  ```
+
+* Verified that SSH key-based login works from the Windows host without using the Ubuntu account password.
+
+* Disabled password-based SSH authentication and root SSH login in:
+
+  ```text
+  /etc/ssh/sshd_config.d/99-hardening.conf
+  ```
+
+* Validated and reloaded the SSH service:
+
+  ```bash
+  sudo sshd -t
+  sudo systemctl reload ssh
+  ```
+
+* Created a VirtualBox snapshot: `SSH Key Authentication and Hardening Complete`.
+
