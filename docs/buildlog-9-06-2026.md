@@ -144,12 +144,12 @@ I verified that Zabbix was collecting live performance data by generating a cont
 
 ```bash
 yes > /dev/null
-
+```
 I allowed Zabbix to collect data points, stopped the test with Ctrl+C, and confirmed that the CPU graph was showing me information about the utilization
 
 During testing the dashboard initially said that the Zabbix server wasnt running it showed
 ```bash
 Access denied for user 'zabbix'@'localhost' (using password: NO)
-
+```
 I corrected the DB password setting, restarted the zabbix-server, and confirmed that live monitoring was working.
 
