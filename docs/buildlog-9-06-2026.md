@@ -137,3 +137,10 @@ I also corrected a SQL query that used `information_schema.table` instead of the
 - Zabbix dashboard
 
 > Passwords and sensitive configuration values were excluded from all screenshots.
+>
+## Monitoring Validation Test
+
+I verified that Zabbix was collecting live performance data by generating a controlled CPU load on the Ubuntu VM:
+
+```bash
+yes > /dev/null
